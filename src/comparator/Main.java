@@ -5,14 +5,14 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 class Checker implements Comparator<Player> {
-
+    //comparator should return positive value when the order appears
+    //to be increasing, since we need decreasing order.
     @Override
     public int compare(Player player1, Player player2) {
 
-        if(player1.score == player2.score)
-            return player1.name.compareTo(player2.name);
-        else
-            return player2.score - player1.score;
+        return (player1.score == player2.score) ?
+                player1.name.compareTo(player2.name) :
+                player2.score - player1.score;
 
     }
 }
