@@ -1,0 +1,6 @@
+#Intellij Idea
+.idea
+hackerrank.iml
+
+#Production
+out
